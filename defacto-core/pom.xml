@@ -9,6 +9,11 @@
     </parent>
     <artifactId>defacto-core</artifactId>
     <name>defacto-core</name>
+    
+    <properties>
+       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
     <dependencies>
         <dependency>
             <groupId>net.sourceforge.owlapi</groupId>
