@@ -89,7 +89,8 @@ public class WordNetExpansion {
     
     public static void main(String args[])
     {
-        WordNetExpansion wne = new WordNetExpansion("resources/wordnet/dict");
+        // WordNetExpansion wne = new WordNetExpansion("resource/wordnet/dict");
+        WordNetExpansion wne = new WordNetExpansion("DeFacto/data/wordnet/dict");
         String token = "couch";
         System.out.println(wne.getSynset(token));
         String token2 = "table";
