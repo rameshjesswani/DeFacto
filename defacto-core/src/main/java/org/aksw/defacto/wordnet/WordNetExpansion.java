@@ -20,7 +20,8 @@ public class WordNetExpansion {
 
     public WordNetExpansion(String dictionary) {
         System.setProperty("wordnet.database.dir", dictionary);
-        database = WordNetDatabase.getFileInstance();        
+        database = WordNetDatabase.getFileInstance();  
+        System.out.println("inside wordnet expansion constructor");
     }
     
     /** Expands a single keyword by retrieving all the elements of all its synsets
@@ -76,6 +77,7 @@ public class WordNetExpansion {
      */
     public double getExpandedJaccardSimilarity(String s1, String s2)
     {
+        System.out.println("inside wordnet expansion class and getExpandedJaccardSimilarity method");
         Set<String> tokens1 = expand(s1);
         Set<String> tokens2 = expand(s2);
         
