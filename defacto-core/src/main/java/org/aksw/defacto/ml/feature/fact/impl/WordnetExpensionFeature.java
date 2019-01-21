@@ -23,7 +23,7 @@ import org.aksw.defacto.wordnet.WordNetExpansion;
 public class WordnetExpensionFeature implements FactFeature {
 
 //    WordNetExpansion wordnetExpansion = new WordNetExpansion(new File(WordnetExpensionFeature.class.getResource("/wordnet/dict").getFile()).getAbsolutePath());
-    System.out.println("get wordnet dictionary path and passing to WordNetExpansion");
+//     System.out.println("get wordnet dictionary path and passing to wordnexaception");
     WordNetExpansion wordnetExpansion = new WordNetExpansion(Defacto.DEFACTO_CONFIG.getStringSetting("evidence", "WORDNET_DICTIONARY"));
     System.out.println("successfully got wordnet dictionary path ");
     
