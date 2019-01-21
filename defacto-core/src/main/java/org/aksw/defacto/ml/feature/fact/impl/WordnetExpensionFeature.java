@@ -34,6 +34,7 @@ public class WordnetExpensionFeature implements FactFeature {
     @Override
     public void extractFeature(ComplexProof proof, Evidence evidence) {
         
+        System.out.println("wORDNET eXPENSION fEATURE is being called by Fact feature (inside WordnetExpensionFeature)");
         double similarity = 0;
 
         List<Pattern> patterns = searcher.querySolrIndex(evidence.getModel().getPropertyUri(), 20, 0, proof.getLanguage());
