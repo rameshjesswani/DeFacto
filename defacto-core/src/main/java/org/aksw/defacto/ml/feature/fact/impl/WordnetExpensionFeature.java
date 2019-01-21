@@ -23,7 +23,7 @@ import org.aksw.defacto.wordnet.WordNetExpansion;
 public class WordnetExpensionFeature implements FactFeature {
 
 //    WordNetExpansion wordnetExpansion = new WordNetExpansion(new File(WordnetExpensionFeature.class.getResource("/wordnet/dict").getFile()).getAbsolutePath());
-    System.out.println("get wordnet dictionary path from defacto.ini and passing to WordNetExpansion");
+    System.out.println("get wordnet dictionary path and passing to WordNetExpansion");
     WordNetExpansion wordnetExpansion = new WordNetExpansion(Defacto.DEFACTO_CONFIG.getStringSetting("evidence", "WORDNET_DICTIONARY"));
     System.out.println("successfully got wordnet dictionary path ");
     
@@ -35,7 +35,7 @@ public class WordnetExpensionFeature implements FactFeature {
     @Override
     public void extractFeature(ComplexProof proof, Evidence evidence) {
         
-        System.out.println("wORDNET eXPENSION fEATURE is being called by Fact feature (inside WordnetExpensionFeature)");
+        System.out.println("wORDNET eXPENSION fEATURE is being called by Fact feature");
         double similarity = 0;
 
         List<Pattern> patterns = searcher.querySolrIndex(evidence.getModel().getPropertyUri(), 20, 0, proof.getLanguage());
