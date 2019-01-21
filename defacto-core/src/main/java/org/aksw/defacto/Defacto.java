@@ -101,7 +101,7 @@ public class Defacto {
         
         // 3. confirm the facts
         long startFactConfirmation = System.currentTimeMillis();
-	LOGGER.info("fact feature extraction class being called in Defacto.java");
+        LOGGER.info("fact feature extraction class being called in Defacto.java");
         FactFeatureExtraction factFeatureExtraction = new FactFeatureExtraction();
         factFeatureExtraction.extractFeatureForFact(evidence);
         LOGGER.info("Fact feature extraction took " + TimeUtil.formatTime(System.currentTimeMillis() - startFactConfirmation));

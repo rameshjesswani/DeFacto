@@ -20,6 +20,10 @@ import org.aksw.defacto.ml.feature.fact.impl.SubjectObjectSimilarityFeature;
 import org.aksw.defacto.ml.feature.fact.impl.TokenDistanceFeature;
 import org.aksw.defacto.ml.feature.fact.impl.TotalOccurrenceFeature;
 import org.aksw.defacto.ml.feature.fact.impl.WordnetExpensionFeature;
+import org.aksw.defacto.util.TimeUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * @author Daniel Gerber <dgerber@informatik.uni-leipzig.de>
@@ -28,6 +32,7 @@ import org.aksw.defacto.ml.feature.fact.impl.WordnetExpensionFeature;
 public class FactFeatureExtraction {
 
     public static Set<FactFeature> factFeatures = new HashSet<FactFeature>();
+    private static final Logger LOGGER = LoggerFactory.getLogger(FactFeatureExtraction.class);
     
     static {
 
@@ -49,6 +54,7 @@ public class FactFeatureExtraction {
      */
     public void extractFeatureForFact(Evidence evidence) {
 
+    	LOGGER.info("inside extract feature for fact method in FactFeatureExtraction class " );
         // score the collected evidence with every feature extractor defined
         for ( ComplexProof proof : evidence.getComplexProofs() ) {
             
