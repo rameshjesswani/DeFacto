@@ -1,5 +1,5 @@
 
-
+<!--
 	<div class="container" ng-show="!home.authenticated">
     <h3>Login</h3>
     <br>
@@ -12,9 +12,9 @@
     <a  href="/login/google" class="btn btn-block btn-social btn-google">
       <span class="fa fa-google"></span> Sign in with Google
     </a>
-	</div>
+	</div> -->
 
-<div class="container" ng-show="home.authenticated">
+<div class="container">
 
   <!-- navi -->
   <nav class="navbar navbar-inverse">
@@ -23,7 +23,9 @@
         <li><a href="">Demo<span class="sr-only">(current)</span></a></li>
         <li><a href="http://aksw.org/Projects/DeFacto.html" target="_blank">DeFacto Project</a></li>
         <li><a href="https://github.com/AKSW/DeFacto" target="_blank">Source Code</a></li>
-        <li><a href="#" ng-click="home.logout()" >Logout <span ng-bind="home.user.name"></span></a></li>
+        <!--
+        <li><a href="#" ng-click="home.logout()" >Logout <span ng-bind="home.user.name"></span></a></li> -->
+        
       </ul>
     </div>
   </nav>
@@ -90,7 +92,9 @@
   </form>
   </br>
   <ul class="list-group">
+  
     <li class="list-group-item" data-ng-repeat="exam in filtered | startFrom:(currentPage - 1)*pageSize | limitTo:pageSize">
+ 		<p>Fcheck asd</p> 
       <button data-ng-click="getFact(exam)" class="btn btn-link">{{exam.fact}}</button>
     </li>
   </ul>
